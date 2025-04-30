@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+body, h1, p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(232, 157, 93);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav button {
+    font-size: 2rem;
+    width: 12.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+
+    cursor: pointer;
+}
+
+#content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.text, nav button {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(86, 58, 24);
+    border: 4px solid rgb(255, 225, 173);
+    border-radius: 50px;
+    outline: 2px solid black;
+}
+
+.intro {
+    width: clamp(30rem, 70%, 60rem);
+}
+
+.title {
+    color: white;
+    font-weight: 400;
+    font-family: "Winky Rough", Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 12rem;
+    background-color: rgb(120, 81, 62);
+    border: 2px solid black;
+    border-radius: 50px 50px 0 0;
+    margin-left: 2rem;
+}
+
+.portrait {
+    margin-bottom: -10rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+.header {
+    background-color: rgb(255, 195, 110);
+    color: rgb(77, 4, 4);
+    font-weight: 400;
+    font-family: "Winky Rough", Arial, Helvetica, sans-serif;
+    padding: 2rem;
+    margin: 3rem;
+    border: 2px solid rgb(77, 4, 4);
+    box-shadow: 5px 5px;
+}
+
+.reviews .textbox {
+    width: 100%;
+}
+
+.reviews {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    justify-items: center;
+    gap: 2rem;
+}
+
+footer {
+    background-color: rgb(138, 85, 46);
+    color: white;
+
+    font-size: 1rem;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+footer a {
+    color: white;
+}
