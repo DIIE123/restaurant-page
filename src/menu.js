@@ -1,4 +1,4 @@
-import { createHeader } from "./home";
+import { createHeader, createImg } from "./home";
 
 import misoSoup from "./assets/Miso Soup.png";
 import riceBall from "./assets/Rice Ball.png";
@@ -27,7 +27,7 @@ const beveragesArray = [
     { img: mio, name: "Mio", price: 18, tags: ["Low Alcohol", "Bitter", "Chillable", "Cocktail", "Dry", "Sake", "Sweet", "Soda"], },
     { img: sangetsusei, name: "Sangetsusei", price: 34, tags: ["Mid Alcohol", "Chillable", "Heatable", "Neat", "Sake"], },
     { img: sparrowSake, name: "Sparrow Sake", price: 50, tags: ["Mid Alcohol", "Chillable", "Dry", "Heatable", "Sake"], },
-    { img: dassai, name: "Dassai", price: 130, tags: ["Mid Alcohol", "Chillabe", "Heatable", "Neat", "Shochu"], },
+    { img: dassai, name: "Dassai", price: 130, tags: ["Mid Alcohol", "Chillable", "Heatable", "Neat", "Shochu"], },
     { img: fireRat, name: "Fire Rat's Robe", price: 420, tags: ["High Alcohol", "Dry", "Heatable", "Shochu"], },
 ];
 
@@ -57,21 +57,14 @@ function createMenuItem(item) {
     const menuItem = document.createElement("div");
     menuItem.classList.add("menu-item");
 
-    menuItem.append(createMenuImg(item.img, item.name));
+    const img = createImg(item.img, item.name, 100);
+    img.classList.add("menu-img");
+    menuItem.append(img);
     menuItem.append(createMenuName(item.name, item.price));
     menuItem.append(createMenuTags(item.tags));
     return menuItem;
 }
 
-function createMenuImg(src, alt) {
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = alt;
-    img.width = 100;
-    img.height = 100;
-    img.classList.add("menu-img");
-    return img;
-}
 
 function createMenuName(name, price) {
     const container = document.createElement("div");

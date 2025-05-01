@@ -2,6 +2,7 @@ import "./styles.css";
 
 import createHome from "./home";
 import createMenu from "./menu";
+import createContact from "./contact";
 
 createHome();
 
@@ -18,4 +19,9 @@ homeButton.addEventListener("click", () => {
 menuButton.addEventListener("click", () => {
     content.textContent = "";
     createMenu();
+});
+
+contactButton.addEventListener("click", () => {
+    content.textContent = "";
+    createContact();
 });

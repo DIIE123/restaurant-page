@@ -3,7 +3,7 @@ import mystiaPortrait from "./assets/Mystia Portrait.png";
 export default function createHome() {
     const content = document.querySelector("#content");
     
-    const mainPortrait = createPortrait(mystiaPortrait, "Mystia Portrait", "260");
+    const mainPortrait = createImg(mystiaPortrait, "Mystia Portrait", "260");
     mainPortrait.classList.add("portrait");
     content.append(mainPortrait);
 
@@ -23,7 +23,7 @@ export default function createHome() {
     content.append(reviews);
 }
 
-function createPortrait(src, alt, width) {
+export function createImg(src, alt, width) {
     const img = document.createElement("img");
     img.src = src;
     img.alt = alt;
@@ -38,7 +38,7 @@ export function createHeader(text) {
     return header;
 }
 
-function createTextbox(title, text) {
+export function createTextbox(title, text) {
     const textbox = document.createElement("div");
     textbox.classList.add("textbox");
     
@@ -49,7 +49,7 @@ function createTextbox(title, text) {
 
     const textcontent = document.createElement("p");
     textcontent.classList.add("text");
-    textcontent.textContent = text;
+    textcontent.innerHTML = text;
     textbox.append(textcontent);
 
     return textbox;
