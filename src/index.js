@@ -12,16 +12,16 @@ const contactButton = document.querySelector(".contact");
 const content = document.querySelector("#content");
 
 homeButton.addEventListener("click", () => {
-    content.textContent = "";
-    createHome();
+  content.textContent = "";
+  createHome();
 });
 
 menuButton.addEventListener("click", () => {
-    content.textContent = "";
-    createMenu();
+  content.textContent = "";
+  createMenu();
 });
 
 contactButton.addEventListener("click", () => {
-    content.textContent = "";
-    createContact();
+  content.textContent = "";
+  createContact();
 });
